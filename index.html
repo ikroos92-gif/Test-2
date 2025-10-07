@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Match Tub Ignition</title>
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Match Tub Ignition</h1>
+      <p>Drop matches, watch the sparks fly, and build a blazing empire.</p>
+    </header>
+
+    <main>
+      <section class="tub-section">
+        <canvas id="tub" width="720" height="540" aria-label="Match tub"></canvas>
+        <div class="tub-overlay">
+          <button id="drop-match" class="primary">Drop Matches</button>
+          <button id="refresh-matches" class="secondary">Dump New Load</button>
+        </div>
+      </section>
+
+      <section class="sidebar">
+        <div class="panel stats">
+          <h2>Stats</h2>
+          <ul>
+            <li><span>Burnt Matches (Currency)</span><strong id="currency">0</strong></li>
+            <li><span>Unburnt Matches</span><strong id="unburnt">0</strong></li>
+            <li><span>Currently Burning</span><strong id="burning">0</strong></li>
+            <li><span>Match Load Cost</span><strong id="refresh-cost">0</strong></li>
+            <li><span>Tub Capacity</span><strong id="capacity">0</strong></li>
+          </ul>
+        </div>
+
+        <div class="panel upgrades">
+          <h2>Upgrades</h2>
+          <div class="upgrade" data-upgrade="matchesPerDrop">
+            <div class="info">
+              <h3>Bulk Drop</h3>
+              <p>Increase how many matches are dropped at once.</p>
+            </div>
+            <button class="buy">Buy</button>
+          </div>
+
+          <div class="upgrade" data-upgrade="sparksPerMatch">
+            <div class="info">
+              <h3>Strike Anywhere</h3>
+              <p>Increase sparks released by each igniting match.</p>
+            </div>
+            <button class="buy">Buy</button>
+          </div>
+
+          <div class="upgrade" data-upgrade="specialMatchChance">
+            <div class="info">
+              <h3>Special Match Heads</h3>
+              <p>Increase the chance that a match is special and emits extra sparks.</p>
+            </div>
+            <button class="buy">Buy</button>
+          </div>
+
+          <div class="upgrade" data-upgrade="tubSize">
+            <div class="info">
+              <h3>Expand Tub</h3>
+              <p>Increase the size of the tub to hold more matches.</p>
+            </div>
+            <button class="buy">Buy</button>
+          </div>
+
+          <div class="upgrade" data-upgrade="sparkReach">
+            <div class="info">
+              <h3>Flickering Reach</h3>
+              <p>Extend how far sparks can travel across the grid.</p>
+            </div>
+            <button class="buy">Buy</button>
+          </div>
+
+          <div class="upgrade future">
+            <div class="info">
+              <h3>More Upgrades Coming</h3>
+              <p>Reserved slots for future mechanics and scaling options.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <small>Tip: Matches ignite within the highlighted hexes. Upgrade your sparks to spread the fire faster.</small>
+  </footer>
+
+  <script src="src/script.js" type="module"></script>
+</body>
+</html>
